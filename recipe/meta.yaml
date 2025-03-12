@@ -28,6 +28,7 @@ test:
     - openjdk >=21
     - r5py >=0.1.0
     - python {{ python_min }}
+    - pytest
   imports:
     - r5py
   source_files:
