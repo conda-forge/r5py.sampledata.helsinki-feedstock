@@ -1,18 +1,18 @@
 {% set name = "r5py.sampledata.helsinki" %}
-{% set version = "0.1.2" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1a58c5a67a05d644377a54d56ccef159d577fcb55d991eb3506cac477ca37761
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/r5py_sampledata_helsinki-{{ version }}.tar.gz
+  sha256: 70988371234f7828d8454af4e19d1d4668afccbf2dfa8d78d532813c81e6b001
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
