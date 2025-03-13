@@ -1,5 +1,5 @@
 {% set name = "r5py.sampledata.helsinki" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2.post1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 70988371234f7828d8454af4e19d1d4668afccbf2dfa8d78d532813c81e6b001
+  sha256: 46b8b2284cf968b644efa59d9b5fa874074e68e794578fb8a0bed3fa8e7fdd3d
 
 build:
   noarch: python
@@ -27,8 +27,13 @@ test:
   requires:
     - python {{ python_min }}
     - pip
+    - pytest
+    - r5py
+  source_files:
+    - tests
   commands:
     - pip check
+    - python -m pytest
 
 about:
   home: https://github.com/r5py/r5py.sampledata.helsinki
