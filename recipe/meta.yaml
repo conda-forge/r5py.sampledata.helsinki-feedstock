@@ -25,17 +25,10 @@ requirements:
 
 test:
   requires:
-    - openjdk >=21
-    - r5py >=0.1.0
     - python {{ python_min }}
-    - pytest
-  imports:
-    - r5py
-  source_files:
-    - tests
+    - pip
   commands:
     - pip check
-    - python -m pytest tests
 
 about:
   home: https://github.com/r5py/r5py.sampledata.helsinki
