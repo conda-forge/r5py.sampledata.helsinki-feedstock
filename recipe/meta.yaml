@@ -1,5 +1,5 @@
 {% set name = "r5py.sampledata.helsinki" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.3.post3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 997427bc7794549f72ddf91eabb553b6f5c2177a3c467b5261daa9eeb33907eb
+  sha256: d4beea780b7530f5b80ae742e10a194c490e680a35438ac211873de2d57f5ae4
 
 build:
   noarch: python
